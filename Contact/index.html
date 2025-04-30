@@ -1,0 +1,124 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Klee+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../main_styles.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Sarahs Website</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <div class="header-top"></div>
+        <div class="header-nav">
+          <div class="header-nav-hamburger" id="header-nav-hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <div class="header-nav-menu" id="header-nav-menu">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../Summary/index.html">Overview</a></li>
+              <li><a href="../Project_1/index.html">BloomWish</a></li>
+              <li><a href="../Project_2/index.html">Foresters Untamed</a></li>
+              <li><a href="../Project_3/index.html">Lion Print</a></li>
+              <li><a href="../Project_4/index.html">Box and Cups</a></li>
+              <li><a href="../Project_5/index.html">Women's Income</a></li>
+              <li class="header-nav-active-button">
+                <a href="../Contact/index.html">Contact</a>
+              </li>
+              <li><a href="../About/index.html">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="body">
+        <div class="page-header kalam-regular">Contact</div>
+        <div class="form-container klee-one-regular">
+          <div class="form-subgroup">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="First Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Last Name"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-subgroup email">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-subgroup">
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                rows="10"
+                placeholder="Type your message here"
+                required
+              ></textarea>
+            </div>
+          </div>
+          <button class="submit-button kalam-regular" type="submit">
+            Submit
+          </button>
+        </div>
+      </div>
+      <div class="footer"></div>
+    </div>
+    <script>
+      const hamburger = document.getElementById("header-nav-hamburger");
+      const navMenu = document.getElementById("header-nav-menu");
+
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+
+      document.addEventListener("click", (event) => {
+        const isClickInsideHamburger = hamburger.contains(event.target);
+        const isClickInsideMenu = navMenu.contains(event.target);
+
+        if (
+          !isClickInsideHamburger &&
+          !isClickInsideMenu &&
+          navMenu.classList.contains("active")
+        ) {
+          navMenu.classList.remove("active"); // Close menu if the clicked element is outside
+        }
+      });
+    </script>
+  </body>
+</html>

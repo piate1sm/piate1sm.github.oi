@@ -1,0 +1,82 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Klee+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../main_styles.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Sarahs Website</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <div class="header-top"></div>
+        <div class="header-nav">
+          <div class="header-nav-hamburger" id="header-nav-hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <div class="header-nav-menu" id="header-nav-menu">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../Summary/index.html">Overview</a></li>
+              <li><a href="../Project_1/index.html">BloomWish</a></li>
+              <li><a href="../Project_2/index.html">Foresters Untamed</a></li>
+              <li><a href="../Project_3/index.html">Lion Print</a></li>
+              <li><a href="../Project_4/index.html">Box and Cups</a></li>
+              <li><a href="../Project_5/index.html">Women's Income</a></li>
+              <li><a href="../Contact/index.html">Contact</a></li>
+              <li class="header-nav-active-button">
+                <a href="../About/index.html">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="body">
+        <div class="page-header kalam-regular">About</div>
+        <div class="project-description klee-one-regular">
+          My name is Sarah Piatek. I will be a graduate of Central Michigan in
+          2026. I am from Rockford MI and will have a BFA in graphic design with
+          a minor in art history. I specialize in Illustrator, Photoshop,
+          InDesign and UX/UI. I do a fair amount of freelance work as well. Some
+          of my favorite things are making stickers, watching tv, and hanging
+          with friends and family. I also have a dog named Raylan.
+        </div>
+        <img src="./img-0063-10.png" alt="img" />
+      </div>
+      <div class="footer"></div>
+    </div>
+    <script>
+      const hamburger = document.getElementById("header-nav-hamburger");
+      const navMenu = document.getElementById("header-nav-menu");
+
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+
+      document.addEventListener("click", (event) => {
+        const isClickInsideHamburger = hamburger.contains(event.target);
+        const isClickInsideMenu = navMenu.contains(event.target);
+
+        if (
+          !isClickInsideHamburger &&
+          !isClickInsideMenu &&
+          navMenu.classList.contains("active")
+        ) {
+          navMenu.classList.remove("active"); // Close menu if the clicked element is outside
+        }
+      });
+    </script>
+  </body>
+</html>
