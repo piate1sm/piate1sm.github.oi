@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.6.1/dist/aframe-extras.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene xr-session-grant shadow="type: pcfsoft">
+      <a-sky color="#87CEEB"></a-sky>
+      <a-plane rotation="-90 0 0" width="20" height="20" color="#7BC8A4"></a-plane>
+      
+   <a-assets>
+        <img id="dark-denim" src="Pants/dark-denim.png">
+        <img id="medium-denim" src="Pants/medium-denim.png">
+        <img id="light-denim" src="Pants/light-denim.png">
+        <img id="hiking-pants" src="Pants/hiking-pants.png">
+   </a-assets>
+
+   <assets>
+      <img id="plywood" src="plywood-texture.jpg">
+   </assets>
+      
+   <a-entity id="storefront" position="0 0 -4">
+        
+   <a-entity id="main-cornice" position="0 3.2 0.1">
+      <a-box width="4.55" height="0.1" depth="0.5" position="0 0.05 0" color="#f7f5e6"></a-box>
+      <a-box width="4.75" height="0.1" depth="0.6" position="0 0.15 0" color="#f7f5e6"></a-box>
+      <a-box width="4.9" height="0.1" depth="0.7" position="0 0.25 0" color="#f7f5e6"></a-box>
+   </a-entity>
+        
+   <a-entity id="sign-area" position="0 2.85 0.1">
+      <a-box width="1.330" height="0.7" depth="0.430" position="0 -0.005 -0.165" color="#f7f5e6"></a-box>
+      
+      <a-box id="sign-panel-front" width="1.280" height="0.5" depth="0.02" position="0 0 0.06" color="#f0f0f0"></a-box>
+      <a-box id="sign-cornice-front" width="1.500" height="0.100" depth="0.100" position="0 0.330 0.104" color="#f7f5e6"></a-box>
+   
+      <a-box id="sign-panel-back" width="1.280" height="0.5" depth="0.02" position="0 0 -0.383" color="#f0f0f0"></a-box>
+      <!-- <a-box id="sign-cornice-back" width="1.500" height="0.100" depth="0.100" position="0 0.330 -0.383" color="#f7f5e6"></a-box> -->
+
+      <a-box width="1.340" height="0.02" depth="0.500" position="0 -0.346 -0.145" color="#eeeeee"></a-box>
+   </a-entity>
+
+        <a-entity id="outer-column-left" position="-2.1 1.6 0.1">
+            <a-box width="0.35" height="3.2" depth="0.3" color="#f7f5e6"></a-box>
+            <a-box width="0.22" height="1.8" depth="0.02" position="0 0.55 0.155" color="#f0f0f0"></a-box>
+            <a-box width="0.22" height="0.6" depth="0.02" position="0 -0.9 0.155" color="#f0f0f0"></a-box>
+            <a-box width="0.22" height="1.8" depth="0.02" position="0 0.55 -0.155" color="#f0f0f0"></a-box>
+            <a-box width="0.22" height="0.6" depth="0.02" position="0 -0.9 -0.155" color="#f0f0f0"></a-box>
+            <a-box width="0.38" height="0.12" depth="0.34" position="0 -0.45 0" color="#f7f5e6"></a-box>
+            <a-box width="0.4" height="0.1" depth="0.35" position="0 1.5 0" color="#f7f5e6"></a-box>
+            <a-box width="0.4" height="0.1" depth="0.35" position="0 -1.5 0" color="#f7f5e6"></a-box>
+        </a-entity>
+
+        <a-entity id="outer-column-right" position="2.1 1.6 0.1">
+            <a-box width="0.35" height="3.2" depth="0.3" color="#f7f5e6"></a-box>
+            <a-box width="0.22" height="1.8" depth="0.02" position="0 0.55 0.155" color="#f0f0f0"></a-box>
+            <a-box width="0.22" height="0.6" depth="0.02" position="0 -0.9 0.155" color="#f0f0f0"></a-box>
+            <a-box width="0.22" height="1.8" depth="0.02" position="0 0.55 -0.155" color="#f0f0f0"></a-box>
+            <a-box width="0.22" height="0.6" depth="0.02" position="0 -0.9 -0.155" color="#f0f0f0"></a-box>
+            <a-box width="0.38" height="0.12" depth="0.34" position="0 -0.45 0" color="#f7f5e6"></a-box>
+            <a-box width="0.4" height="0.1" depth="0.35" position="0 1.5 0" color="#f7f5e6"></a-box>
+            <a-box width="0.4" height="0.1" depth="0.35" position="0 -1.5 0" color="#f7f5e6"></a-box>
+        </a-entity>
+
+        <a-entity id="left-window-unit" position="-1.402 1.400 0.100">
+           <a-box width="1.1" height="1.920" depth="0.02" position="0 0.162 0" material="color: #e6f2ff; opacity: 0.5; transparent: true"></a-box>
+           <a-box width="1.1" height="0.1" depth="0.12" position="0 1.162 0" color="#f7f5e6"></a-box>
+           <a-entity position="0 1.451 0">
+              <a-box width="1.1" height="0.5" depth="0.02" material="color: #e6f2ff; opacity: 0.5; transparent: true"></a-box>
+              <a-box width="0.03" height="0.5" depth="0.08" position="-0.18 0 0" color="#f7f5e6"></a-box>
+              <a-box width="0.03" height="0.5" depth="0.08" position="0.18 0 0" color="#f7f5e6"></a-box>
+           </a-entity>
+           <a-box width="1.1" height="0.1" depth="0.12" position="0.040 1.749 0.069" color="#f7f5e6"></a-box>
+           <a-box width="1.15" height="0.7" depth="0.15" position="0 -1.1 0" color="#f7f5e6"></a-box>
+           <a-box width="1.0" height="0.5" depth="0.05" position="0.027 -1.074 0.080" color="#f0f0f0"></a-box>
+           <a-box width="1.0" height="0.5" depth="0.05" position="0.027 -1.074 -0.080" color="#f0f0f0"></a-box>
+        </a-entity>
+
+        <a-entity id="right-window-unit" position="1.395 1.400 0.100">
+           <a-box width="1.1" height="1.920" depth="0.02" position="0 0.162 0" material="color: #e6f2ff; opacity: 0.5; transparent: true"></a-box>
+           <a-box width="1.1" height="0.1" depth="0.12" position="0 1.162 0" color="#f7f5e6"></a-box>
+           <a-entity position="0 1.451 0">
+              <a-box width="1.1" height="0.5" depth="0.02" material="color: #e6f2ff; opacity: 0.5; transparent: true"></a-box>
+              <a-box width="0.03" height="0.5" depth="0.08" position="-0.18 0 0" color="#f7f5e6"></a-box>
+              <a-box width="0.03" height="0.5" depth="0.08" position="0.18 0 0" color="#f7f5e6"></a-box>
+           </a-entity>
+           <a-box width="1.1" height="0.1" depth="0.12" position="-0.030 1.749 0.069" color="#f7f5e6"></a-box>
+           <a-box width="1.15" height="0.7" depth="0.15" position="0 -1.1 0" color="#f7f5e6"></a-box>
+           <a-box width="1.0" height="0.5" depth="0.05" position="-0.008 -1.074 0.080" color="#f0f0f0"></a-box>
+           <a-box width="1.0" height="0.5" depth="0.05" position="-0.008 -1.074 -0.080" color="#f0f0f0"></a-box>
+        </a-entity>
+
+        <a-entity id="recessed-unit" position="0 0 -0.7">
+           <a-entity position="-0.75 1.6 0.4">
+              <a-box width="0.2" height="3.2" depth="0.3" color="#f7f5e6" position="0 0 0.257"></a-box>
+              <a-box width="0.12" height="1.8" depth="0.02" position="0 0.55 0.41" color="#f2f2f2"></a-box>
+              <a-box width="0.12" height="0.6" depth="0.02" position="0 -0.9 0.41" color="#f2f2f2"></a-box>
+              <a-box width="0.12" height="1.8" depth="0.02" position="0 0.55 0.107" color="#f2f2f2"></a-box>
+              <a-box width="0.12" height="0.6" depth="0.02" position="0 -0.900 0.105" color="#f2f2f2"></a-box>
+              <a-box width="0.24" height="0.12" depth="0.340" position="0 -0.450 0.253" color="#f7f5e6"></a-box>
+           </a-entity>
+
+           <a-entity position="0.75 1.6 0.4">
+              <a-box width="0.2" height="3.2" depth="0.3" color="#f7f5e6" position="0 0 0.257"></a-box>
+              <a-box width="0.12" height="1.8" depth="0.02" position="0 0.55 0.41" color="#f2f2f2"></a-box>
+              <a-box width="0.12" height="0.6" depth="0.02" position="0 -0.9 0.41" color="#f2f2f2"></a-box>
+              <a-box width="0.12" height="1.8" depth="0.02" position="0 0.55 0.107" color="#f2f2f2"></a-box>
+              <a-box width="0.12" height="0.6" depth="0.02" position="0 -0.9 0.105" color="#f2f2f2"></a-box>
+              <a-box width="0.24" height="0.12" depth="0.340" position="0 -0.450 0.253" color="#f7f5e6"></a-box>
+           </a-entity>
+
+           <a-entity id="doors" position="0 1.150 0.612">
+              <a-entity id="door-L" position="-0.330 0 0.075">
+                 <a-box width="0.680" height="2.540" depth="0.06" position="0 0.082 0" color="#f7f5e6">
+                    <a-box width="0.5" height="1.4" depth="0.03" position="-0.004 0.200 0.018" material="color: #e6f2ff; opacity: 0.5; transparent: true"></a-box>
+                    <a-box width="0.5" height="1.4" depth="0.03" position="-0.004 0.200 -0.018" material="color: #e6f2ff; opacity: 0.5; transparent: true"></a-box>
+                    <a-box width="0.5" height="0.4" depth="0.02" position="0 -0.826 0.03" color="#f0f0f0"></a-box>
+                    <a-box width="0.5" height="0.4" depth="0.02" position="0 -0.826 -0.03" color="#f0f0f0"></a-box>
+                 </a-box>
+                 <a-cylinder radius="0.01" height="0.4" position="0.28 0 0.05" color="#d4af37"></a-cylinder>
+                 <a-cylinder radius="0.01" height="0.4" position="0.28 0 -0.05" color="#d4af37"></a-cylinder>
+              </a-entity>
+
+              <a-entity id="door-R" position="0.330 0 0.075">
+                 <a-box width="0.680" height="2.540" depth="0.06" position="0 0.082 0" color="#f7f5e6">
+                    <a-box width="0.5" height="1.4" depth="0.03" position="-0.004 0.200 0.018" material="color: #e6f2ff; opacity: 0.5; transparent: true"></a-box>
+                    <a-box width="0.5" height="1.4" depth="0.03" position="-0.004 0.200 -0.018" material="color: #e6f2ff; opacity: 0.5; transparent: true"></a-box>
+                    <a-box width="0.5" height="0.4" depth="0.02" position="0 -0.826 0.03" color="#f0f0f0"></a-box>
+                    <a-box width="0.5" height="0.4" depth="0.02" position="0 -0.826 -0.03" color="#f0f0f0"></a-box>
+                 </a-box>
+                 <a-cylinder radius="0.01" height="0.4" position="-0.28 0 0.05" color="#d4af37"></a-cylinder>
+                 <a-cylinder radius="0.01" height="0.4" position="-0.28 0 -0.05" color="#d4af37"></a-cylinder>
+              </a-entity>
+           </a-entity>
+        </a-entity>
+      </a-entity>
+
+      
+
+      <a-entity id="rig" movement-controls="speed: 0.15">
+        <a-entity camera position="0 1.6 2" look-controls></a-entity>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>

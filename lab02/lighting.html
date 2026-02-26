@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Experiment</title>
+</head>
+<body>
+    <a-scene>
+        <a-box position="-1 0.5 -3" rotation="0 45 0" color="#FFF" shadow></a-box>
+        <a-sphere position="0 1.25 -5" radius="1.25" color="#FFF" shadow></a-sphere>
+        <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFF" shadow></a-cylinder>
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#FFF" shadow></a-plane>
+        
+        <a-light type="ambient" intensity="0.1"></a-light>
+        <!-- <a-light type="point" intensity="3"></a-light>
+        <a-light type="point" intensity="3"></a-light> -->
+
+        <!-- <a-light type="directional" position="2 3 1.7"></a-light> -->
+         <!-- <a-light type="hemisphere" color="#f00" ground-color="#00f"></a-light> -->
+          <a-light type="spot" position="0 2 0"></a-light>
+
+          <a-cubemap id="colorama">
+                <a-cubemap-face src="/cubemap2/px.png"/>
+                <a-cubemap-face src="/cubemap2/nx.png"/>
+                <a-cubemap-face src="/cubemap2/py.png"/>
+                <a-cubemap-face src="/cubemap2/ny.png"/>
+                <a-cubemap-face src="/cubemap2/pz.png"/>
+                <a-cubemap-face src="/cubemap2/nz.png"/>
+            </a-cubemap>
+            
+ <a-entity light="type: probe; envMap: #colorama"></a-entity>
+        <a-sky color="#333"></a-sky>
+    </a-scene>
+    
+    <script type="module" src="/src/main.js"></script>
+    
+</body>
+</html>
