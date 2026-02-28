@@ -15,12 +15,12 @@
         <img id="medium-denim" src="Pants/medium-denim.png">
         <img id="light-denim" src="Pants/light-denim.png">
         <img id="hiking-pants" src="Pants/hiking-pants.png">
+        <img id="plywood" src="plywood_1k.blend/textures/plywood_diff_1k.jpg">
    </a-assets>
 
-   <assets>
-      <img id="plywood" src="plywood-texture.jpg">
-   </assets>
-      
+
+   
+
    <a-entity id="storefront" position="0 0 -4">
         
    <a-entity id="main-cornice" position="0 3.2 0.1">
@@ -137,6 +137,44 @@
       </a-entity>
 
       
+<a-entity id="watch-tray" position="0 1.1 -0.5">
+  
+  <a-box id="tray-bottom" 
+         width="0.6" height="0.02" depth="0.4" 
+         material="color: #DEB887; roughness: 0.8;">   
+         
+    <a-plane position="0 0.011 0" rotation="-90 0 0" 
+             width="0.58" height="0.38" 
+             material="color: #3d251e; roughness: 0.9;">
+    </a-plane>
+  </a-box>
+
+  <a-box position="0 0.03 -0.19" width="0.6" height="0.06" depth="0.02" 
+         material="color: #DEB887;"></a-box>
+  <a-box position="0 0.03 0.19" width="0.6" height="0.06" depth="0.02" 
+         material="color: #DEB887;"></a-box>
+  <a-box position="-0.29 0.03 0" width="0.02" height="0.06" depth="0.4" 
+         material="color: #DEB887;"></a-box>
+  <a-box position="0.29 0.03 0" width="0.02" height="0.06" depth="0.4" 
+         material="color: #DEB887;"></a-box>
+</a-entity>
+
+<a-entity id="flat-watch-1" position="-0.1 1.121 -0.5">
+  <a-box width="0.25" height="0.005" depth="0.04" material="color: #000000; roughness: 0.9;"></a-box>
+
+  <a-cylinder position="0 0.005 0" radius="0.032" height="0.012" material="color: #D4AF37; metalness: 0.8; roughness: 0.2;"></a-cylinder>
+
+  <a-cylinder position="0 0.011 0" radius="0.028" height="0.002" material="color: #FFFFFF; roughness: 0.3;"></a-cylinder>
+  
+  <a-sphere position="-0.002 0.005 0.031" radius="0.006" material="color: #D4AF37; metalness: 0.9;"></a-sphere>
+
+  <a-box position="-0.012 0.012 0.000" rotation="0 0 0" width="0.02" height="0.001" depth="0.002" material="color: #222;"></a-box>
+
+  <a-box position="-0.006 0.012 -0.004" rotation="0 -30 0" width="0.012" height="0.001" depth="0.002" material="color: #222;"></a-box>
+
+  <a-cylinder position="0 0.0122 0" radius="0.002" height="0.001" material="color: #D4AF37;"></a-cylinder>
+</a-entity>
+
 
       <a-entity id="rig" movement-controls="speed: 0.15">
         <a-entity camera position="0 1.6 2" look-controls></a-entity>

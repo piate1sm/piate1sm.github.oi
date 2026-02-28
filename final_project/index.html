@@ -38,13 +38,24 @@
         <img id="hiking-pants" src="Pants/hiking-pants.png">
       </assets>
 
-      <assets>
+      <a-assets>
         <img id="black-shoe" src="Shoes/black-shoe.png">
         <img id="brown-shoe" src="Shoes/brown-shoe.png">
         <img id="tan-shoe" src="Shoes/tan-shoes.png">
         <img id="green-shoe" src="Shoes/green-shoe.png">
-      </assets>
+      </a-assets>
+
+      <a-assets>
+        <img id="suite-case" src="suite-case-texture.png">
+      </a-assets>
+
+      <a-assets>
+        <img id="leather" src="brown_leather_1k.blend/textures/brown_leather_albedo_1k.jpg">
+        <img id="white-leather" src="leather_white_1k.blend/textures/leather_white_diff_1k.jpg">
+      </a-assets>
+
       
+
 <a-entity id="main-flooring" position="0 0.01 0">
   <a-plane position="0.149 0.000 4.107" rotation="-90 90 0" width="5.470" height="10.480" 
            src="#flooring" color="#7d6464"material="repeat: 4 6"></a-plane>
@@ -174,10 +185,12 @@
 </a-entity>
 
 <a-entity id="bathroom-interior" position="0.5 0 0.5">
+  
   <a-entity id="toilet" position="3.499 0.352 -1.658" rotation="0 0 0">
     <a-box width="0.4" height="0.4" depth="0.6" color="#fefefe"></a-box>
     <a-box width="0.45" height="0.4" depth="0.2" position="0 0.4 -0.2" color="#fefefe"></a-box>
     <a-cylinder radius="0.2" height="0.1" position="0 0.2 0.1" color="#fefefe"></a-cylinder>
+    <a-box width="0.03" height="0.02" depth="0.1" position="-0.144 0.525 -0.084" rotation="0 -90 0" material="color: #d4af37; metalness: 0.180"></a-box> 
   </a-entity>
 
   <a-entity id="detailed-sink" position="2.374 0.850 -1.707" rotation="0 0 0">
@@ -436,23 +449,23 @@
       </a-entity>
 
 <a-entity id="men's-counter" position="-0.506 0.000 -0.250">
-    <a-box width="1.230" height="0.81" depth="0.480" position="0 0.405 0" color="#ffc87a" 
+    <a-box width="1.230" height="0.81" depth="0.680" position="0 0.405 0" color="#ffc87a" 
           material="src: #plywood; repeat: 1 1; roughness: 0.6"></a-box>
-    <a-box width="1.350" height="0.040" depth="0.520" position="-0.005 0.830 0" 
+    <a-box width="1.350" height="0.040" depth="0.720" position="-0.005 0.830 0" 
           material="src: #black-countertop; repeat: 1 1; roughness: 0.2; metalness: 0.1"></a-box>
 </a-entity>
 
 <a-entity id="women's-counter" position="-0.200 0.023 7.608">
-    <a-box width="1.230" height="0.81" depth="0.480" position="0 0.405 0" color="#ffc87a" 
+    <a-box width="1.230" height="0.81" depth="0.680" position="0 0.405 0" color="#ffc87a" 
           material="src: #plywood; repeat: 1 1; roughness: 0.6"></a-box>
-    <a-box width="1.350" height="0.040" depth="0.520" position="-0.019 0.83 0" 
+    <a-box width="1.350" height="0.040" depth="0.720" position="-0.019 0.83 0" 
           material="src: #white-countertop; repeat: 1 1; roughness: 0.2; metalness: 0.1"></a-box>
 </a-entity>
 
 <a-entity id="women's-counter-2" position="-2.491 0.000 7.225" rotation="0 90 0">
-    <a-box width="1.230" height="0.81" depth="0.480" position="0 0.405 0" color="#ffc87a" 
+    <a-box width="1.230" height="0.81" depth="0.680" position="0 0.405 0" color="#ffc87a" 
           material="src: #plywood; repeat: 1 1; roughness: 0.6"></a-box>
-    <a-box width="1.350" height="0.040" depth="0.520" position="-0.019 0.83 0" 
+    <a-box width="1.350" height="0.040" depth="0.720" position="-0.019 0.83 0" 
           material="src: #white-countertop; repeat: 1 1; roughness: 0.2; metalness: 0.1"></a-box>
 </a-entity>
 
@@ -631,8 +644,10 @@
 </a-entity>
 
 <a-entity id="luggage-20-carryon-ribbed" position="-2.233 0.000 0.074" rotation="0 -90 0">
-  <a-box width="0.36" height="0.51" depth="0.23" position="0 0.305 0" color="#074213" material="roughness: 0.5; metalness: 0.2; repeat: 8 1"
-         src="https://cdn.glitch.global/605e5651-7041-479c-8f3e-55c3c10a38b5/stripe_texture.png?163"></a-box>
+  <a-box width="0.36" height="0.51" depth="0.23" position="0 0.305 0" 
+         color="#1d772f" 
+         material="roughness: 0.5; metalness: 0.2; repeat: 8 1"
+         src="#suite-case"></a-box>
     <a-box width="0.37" height="0.05" depth="0.24" position="0 0.1 0" color="#A0522D"></a-box>
     <a-box width="0.37" height="0.05" depth="0.24" position="0 0.490 0" color="#A0522D"></a-box>
     <a-box width="0.15" height="0.02" depth="0.02" position="0 0.565 0" color="#A0522D"></a-box>
@@ -643,10 +658,12 @@
 </a-entity>
 
 <a-entity id="luggage-24-ribbed" position="-2.566 0.000 -0.221" rotation="0 -90 0">
-  <a-box width="0.42" height="0.65" depth="0.26" position="0 0.375 0" color="#074213" material="roughness: 0.5; metalness: 0.2; repeat: 10 1"
-         src="https://cdn.glitch.global/605e5651-7041-479c-8f3e-55c3c10a38b5/stripe_texture.png?163"></a-box>
+  <a-box width="0.42" height="0.65" depth="0.26" position="0 0.375 0" 
+         color="#1d772f" 
+         material="roughness: 0.5; metalness: 0.2; repeat: 10 1"
+         src="#suite-case"></a-box>
     <a-box width="0.43" height="0.05" depth="0.27" position="0 0.1 0" color="#A0522D"></a-box>
-    <a-box width="0.43" height="0.05" depth="0.27" position="0 0.624 0" color="#A0522D"></a-box>
+    <a-box width="0.43" height="0.05" depth="0.27" position="0.001 0.635 0.000" color="#A0522D"></a-box>
     <a-box width="0.18" height="0.02" depth="0.02" position="0 0.70 0" color="#A0522D"></a-box>
     <a-cylinder radius="0.025" height="0.05" position="-0.15 0.025 0.1" color="#111"></a-cylinder>
     <a-cylinder radius="0.025" height="0.05" position="0.15 0.025 0.1" color="#111"></a-cylinder>
@@ -655,8 +672,10 @@
 </a-entity>
 
 <a-entity id="luggage-28-large" position="-2.560 0.000 0.415" rotation="0 -90 0">
-  <a-box width="0.49" height="0.70" depth="0.29" position="0 0.40 0" color="#074213" material="roughness: 0.5; metalness: 0.2; repeat: 12 1"
-         src="https://cdn.glitch.global/605e5651-7041-479c-8f3e-55c3c10a38b5/stripe_texture.png?163"></a-box>
+  <a-box width="0.49" height="0.70" depth="0.29" position="0 0.40 0" 
+         color="#1d772f" 
+         material="roughness: 0.5; metalness: 0.2; repeat: 12 1"
+         src="#suite-case"></a-box>
   <a-box width="0.50" height="0.05" depth="0.30" position="0 0.1 0" color="#A0522D"></a-box>
   <a-box width="0.50" height="0.05" depth="0.30" position="0 0.685 0" color="#A0522D"></a-box>
   <a-box width="0.22" height="0.02" depth="0.02" position="0 0.759 0" color="#A0522D"></a-box>
@@ -672,6 +691,7 @@
   <a-cylinder id="top-bar" radius="0.02" height="1.5" position="-0.000 1.225 -0.001" rotation="0 0 90" color="#D4AF37" metalness="0.180"></a-cylinder>
   <a-box id="base-left" width="0.4" height="0.03" depth="0.05" position="-0.75 0.015 0" color="#D4AF37"></a-box>
   <a-box id="base-right" width="0.4" height="0.03" depth="0.05" position="0.75 0.015 0" color="#D4AF37"></a-box>
+
 
   <a-entity id="jeans-group" position="-0.5 1.5 0">
     <a-box width="0.03" height="1.140" depth="0.3" position="0 -0.861 0" src=#medium-denim></a-box>
@@ -734,7 +754,90 @@
     <a-image src="#brown-shoe" width="0.340" height="0.390" position="0.101 -0.294 -0.016" transparent="true" alpha-test="0.5"></a-image>
 </a-entity>
 
+<a-entity id="clothing-rack-2" position="2.271 0.000 8.161" rotation="0 90 0">
+  <a-cylinder id="leg-left" radius="0.02" height="1.270" position="-0.75 0.661 0" color="#D4AF37" metalness="0.180"></a-cylinder>
+  <a-cylinder id="leg-right" radius="0.02" height="1.270" position="0.75 0.661 0" color="#D4AF37" metalness="0.180"></a-cylinder>
+  <a-cylinder id="top-bar" radius="0.02" height="1.5" position="-0.000 1.225 -0.001" rotation="0 0 90" color="#D4AF37" metalness="0.180"></a-cylinder>
+  <a-box id="base-left" width="0.4" height="0.03" depth="0.05" position="-0.75 0.015 0" color="#D4AF37"></a-box>
+  <a-box id="base-right" width="0.4" height="0.03" depth="0.05" position="0.75 0.015 0" color="#D4AF37"></a-box>
+</a-entity>
 
+
+<a-entity id="watch-tray" position="-0.805 0.860 -0.254" rotation="0 90 0">
+  <a-box id="tray-bottom" width="0.6" height="0.02" depth="0.4" material="src: #plywood; roughness: 0.8;">
+    <a-plane position="0 0.011 0" rotation="-90 0 0" width="0.58" height="0.38" material="src: #leather; roughness: 0.9;"></a-plane>
+  </a-box>
+  <a-box position="0 0.03 -0.19" width="0.6" height="0.06" depth="0.02"
+         material="src: #plywood; roughness: 0.8;"></a-box>
+  <a-box position="0 0.03 0.19" width="0.6" height="0.06" depth="0.02"
+         material="src: #plywood; roughness: 0.8;"></a-box>
+  <a-box position="0 0.03 0.19" width="0.6" height="0.06" depth="0.02" 
+         material="src: #plywood; roughness: 0.8;"></a-box>
+  <a-box position="-0.29 0.03 0" width="0.02" height="0.06" depth="0.4" 
+         material="src: #plywood; roughness: 0.8;"></a-box>
+  <a-box position="0.29 0.03 0" width="0.02" height="0.06" depth="0.4" 
+         material="src: #plywood; roughness: 0.8;"></a-box>
+</a-entity>
+
+<a-entity id="flat-watch-1" position="-0.674 0.878 -0.124" rotation="0 90 0">
+  <a-box width="0.25" height="0.005" depth="0.04" material="color: #000000; roughness: 0.9;"></a-box>
+  <a-cylinder position="0 0.005 0" radius="0.032" height="0.012" material="color: #000000; metalness: 0.4; roughness: 0.2;"></a-cylinder>
+  <a-cylinder position="0 0.011 0" radius="0.028" height="0.002" material="color: #FFFFFF; roughness: 0.3;"></a-cylinder>
+  <a-sphere position="-0.002 0.005 0.031" radius="0.006" material="color: #000000; metalness: 0.5;"></a-sphere>
+  <a-box position="-0.012 0.012 0.000" rotation="0 0 0" width="0.02" height="0.001" depth="0.002" material="color: #222;"></a-box>
+  <a-box position="-0.006 0.012 -0.004" rotation="0 -30 0" width="0.012" height="0.001" depth="0.002" material="color: #222;"></a-box>
+  <a-cylinder position="0 0.0122 0" radius="0.002" height="0.001" material="color: #000000; metalness: 0.5;"></a-cylinder>
+</a-entity>
+
+<a-entity id="flat-watch-2" position="-0.813 0.878 -0.125" rotation="0 90 0">
+  <a-box width="0.25" height="0.005" depth="0.04" material="color: #C0C0C0; roughness: 0.9; metalness: 0.4;"></a-box>
+  <a-cylinder position="0 0.005 0" radius="0.032" height="0.012" material="color: #C0C0C0; metalness: 0.4; roughness: 0.2;"></a-cylinder>
+  <a-cylinder position="0 0.011 0" radius="0.028" height="0.002" material="color: #FFFFFF; roughness: 0.3;"></a-cylinder>
+  <a-sphere position="-0.002 0.005 0.031" radius="0.006" material="color: #C0C0C0; metalness: 0.5;"></a-sphere>
+  <a-box position="-0.012 0.012 0.000" rotation="0 0 0" width="0.02" height="0.001" depth="0.002" material="color: #222;"></a-box>
+  <a-box position="-0.006 0.012 -0.004" rotation="0 -30 0" width="0.012" height="0.001" depth="0.002" material="color: #222;"></a-box>
+  <a-cylinder position="0 0.0122 0" radius="0.002" height="0.001" material="color: #C0C0C0; metalness: 0.5;"></a-cylinder>
+</a-entity>
+
+<a-entity id="flat-watch-3" position="-0.935 0.878 -0.133" rotation="0 90 0">
+  <a-box width="0.25" height="0.005" depth="0.04" material="color: #D4AF37; roughness: 0.9; metalness: 0.4;"></a-box>
+  <a-cylinder position="0 0.005 0" radius="0.032" height="0.012" material="color: #D4AF37; metalness: 0.8; roughness: 0.2;"></a-cylinder>
+  <a-cylinder position="0 0.011 0" radius="0.028" height="0.002" material="color: #FFFFFF; roughness: 0.3;"></a-cylinder>
+  <a-sphere position="-0.002 0.005 0.031" radius="0.006" material="color: #D4AF37; metalness: 0.9;"></a-sphere>
+  <a-box position="-0.012 0.012 0.000" rotation="0 0 0" width="0.02" height="0.001" depth="0.002" material="color: #222;"></a-box>
+  <a-box position="-0.006 0.012 -0.004" rotation="0 -30 0" width="0.012" height="0.001" depth="0.002" material="color: #222;"></a-box>
+  <a-cylinder position="0 0.0122 0" radius="0.002" height="0.001" material="color: #D4AF37; metalness: 0.5;"></a-cylinder>
+</a-entity>
+
+<a-entity id="flat-watch-4" position="-0.675 0.878 -0.394" rotation="0 90 0">
+  <a-box width="0.25" height="0.005" depth="0.04" material="src: #white-leather; color: #1d4a0d; roughness: 0.9;"></a-box>
+  <a-cylinder position="0 0.005 0" radius="0.032" height="0.012" material="color: #492c1d; metalness: 0.8; roughness: 0.2;"></a-cylinder>
+  <a-cylinder position="0 0.011 0" radius="0.028" height="0.002" material="color: #FFFFFF; roughness: 0.3;"></a-cylinder>
+  <a-sphere position="-0.002 0.005 0.031" radius="0.006" material="color: #492c1d; metalness: 0.9;"></a-sphere>
+  <a-box position="-0.012 0.012 0.000" rotation="0 0 0" width="0.02" height="0.001" depth="0.002" material="color: #222;"></a-box>
+  <a-box position="-0.006 0.012 -0.004" rotation="0 -30 0" width="0.012" height="0.001" depth="0.002" material="color: #222;"></a-box>
+  <a-cylinder position="0 0.0122 0" radius="0.002" height="0.001" material="color: #000000; metalness: 0.5;"></a-cylinder>
+</a-entity>
+
+<a-entity id="flat-watch-5" position="-0.811 0.878 -0.397" rotation="0 90 0">
+  <a-box width="0.25" height="0.005" depth="0.04" material="color: #000000; roughness: 0.9;"></a-box>
+  <a-cylinder position="0 0.005 0" radius="0.032" height="0.012" material="color: #000000; metalness: 0.4; roughness: 0.2;"></a-cylinder>
+  <a-cylinder position="0 0.011 0" radius="0.028" height="0.002" material="color: #FFFFFF; roughness: 0.3;"></a-cylinder>
+  <a-sphere position="-0.002 0.005 0.031" radius="0.006" material="color: #000000; metalness: 0.5;"></a-sphere>
+  <a-box position="-0.012 0.012 0.000" rotation="0 0 0" width="0.02" height="0.001" depth="0.002" material="color: #222;"></a-box>
+  <a-box position="-0.006 0.012 -0.004" rotation="0 -30 0" width="0.012" height="0.001" depth="0.002" material="color: #222;"></a-box>
+  <a-cylinder position="0 0.0122 0" radius="0.002" height="0.001" material="color: #000000; metalness: 0.5;"></a-cylinder>
+</a-entity>
+
+<a-entity id="flat-watch-6" position="-0.934 0.878 -0.397" rotation="0 90 0">
+  <a-box width="0.25" height="0.005" depth="0.04" material="color: #C0C0C0; roughness: 0.9; metalness: 0.4;"></a-box>
+  <a-cylinder position="0 0.005 0" radius="0.032" height="0.012" material="color: #C0C0C0; metalness: 0.4; roughness: 0.2;"></a-cylinder>
+  <a-cylinder position="0 0.011 0" radius="0.028" height="0.002" material="color: #FFFFFF; roughness: 0.3;"></a-cylinder>
+  <a-sphere position="-0.002 0.005 0.031" radius="0.006" material="color: #C0C0C0; metalness: 0.5;"></a-sphere>
+  <a-box position="-0.012 0.012 0.000" rotation="0 0 0" width="0.02" height="0.001" depth="0.002" material="color: #222;"></a-box>
+  <a-box position="-0.006 0.012 -0.004" rotation="0 -30 0" width="0.012" height="0.001" depth="0.002" material="color: #222;"></a-box>
+  <a-cylinder position="0 0.0122 0" radius="0.002" height="0.001" material="color: #C0C0C0; metalness: 0.5;"></a-cylinder>
+</a-entity>
 
 
 <a-entity light="type: ambient; color: #BBB"></a-entity>
