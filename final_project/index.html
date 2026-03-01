@@ -3,11 +3,11 @@
   <head>
     <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aframe-physics-system@6.1.3/dist/aframe-physics-system.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.6.1/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.6.1/dist/aframe-extras.min.js"></script>w
   </head>
   <body>
 
-    <a-scene>
+    <a-scene inspector-plugin-recast>
       <a-sky color="#87CEEB"></a-sky>
       <a-plane rotation="-90 0 0" width="20" height="20" color="#7BC8A4" position="2.571 0.000 4.712"></a-plane>
       <a-plane position="3.330 0.152 -0.604" rotation="-90 0 0" width="1.880" height="1.730" src="#bathroom-floor"></a-plane>
@@ -61,13 +61,15 @@
       </a-assets>
 
       <a-assets>
-        <a-asset-item id="athena-model" src="athena3.glb"></a-asset-item>
+        <a-asset-item id="athena-model" src="athena.glb"></a-asset-item>
+        <a-asset-item id="white-column" src="white_column.glb"></a-asset-item>
       </a-assets>
+      
       
 
 <a-entity id="main-flooring" position="0 0.01 0">
   <a-plane position="0.149 0.000 4.107" rotation="-90 90 0" width="5.470" height="10.480" 
-           src="#flooring" color="#7d6464"material="repeat: 4 6"></a-plane>
+           src="#flooring" color="#7d6464" material="repeat: 4 6"></a-plane>
 
   <a-plane position="0.362 0.000 8.416" rotation="-90 90 0" width="3.150" height="5.310" 
            src="#flooring" color="#7d6464" material="repeat: 1.5 3"></a-plane>
@@ -81,6 +83,16 @@
   <a-plane position="3.967 0.000 0.783" rotation="-90 90 0" width="1.190" height="1.920" 
            src="#flooring" color="#7d6464" material="repeat: 2 1.5"></a-plane>
 
+</a-entity>
+
+<a-entity id="ceiling" position="0 2.59 0">
+  <a-box position="0.149 0.000 4.107" rotation="-90 90 0" width="5.470" height="10.480" depth="0.05" color="#7d6464"></a-box>
+  <a-box position="0.362 0.000 8.416" rotation="-90 90 0" width="3.150" height="5.310" depth="0.05" color="#7d6464"></a-box>
+  <a-box position="0.362 0.000 -0.068" rotation="-90 90 0" width="2.910" height="5.310" depth="0.05" color="#7d6464"></a-box>
+  <a-box position="4.196 0.000 7.690" rotation="-90 90 0" width="1.720" height="2.390" depth="0.05" color="#7d6464"></a-box>
+  <a-box position="3.967 0.000 0.783" rotation="-90 90 0" width="1.190" height="1.920" depth="0.05" color="#7d6464d"></a-box>
+  <!-- Raised Section-->
+  <a-box position="4.115 0.55 6.328" rotation="-90 90 0" width="2.910" height="5.310" depth="0.05" color="#ff0000" scale="1.567 0.422 0.931"></a-box>
 </a-entity>
 
 
@@ -455,7 +467,7 @@
               </a-entity>
            </a-entity>
         </a-entity>
-      </a-entity>
+</a-entity>
 
 <a-entity id="men's-counter" position="-0.506 0.000 -0.250">
     <a-box width="1.230" height="0.81" depth="0.680" position="0 0.405 0" color="#ffc87a" 
@@ -495,7 +507,7 @@
   <a-box id="top-shelf" width="1.78" height="0.04" depth="0.25" position="0 2.11 0" color="#ffc87a" material="src: #plywood"></a-box>
   <a-box id="bottom-base" width="1.78" height="0.08" depth="0.25" position="0 0.04 0" color="#ffc87a" material="src: #plywood"></a-box>
 
-  <a-box width="0.03" height="2.03" depth="0.23" position="-0.3 1.065 -0.01" color="#ffc87a" material="src: #plywood"opacity="0.9"></a-box>
+  <a-box width="0.03" height="2.03" depth="0.23" position="-0.3 1.065 -0.01" color="#ffc87a" material="src: #plywood" opacity="0.9"></a-box>
   <a-box width="0.03" height="2.03" depth="0.23" position="0.3 1.065 -0.01" color="#ffc87a" material="src: #plywood" opacity="0.9"></a-box>
 
   <a-box width="1.70" height="0.02" depth="0.23" position="0 0.5 -0.01" color="#ffc87a" material="src: #plywood"></a-box>
@@ -534,7 +546,7 @@
   <a-box id="top-shelf" width="1.78" height="0.04" depth="0.25" position="0 2.11 0" color="#ffc87a" material="src: #plywood"></a-box>
   <a-box id="bottom-base" width="1.78" height="0.08" depth="0.25" position="0 0.04 0" color="#ffc87a" material="src: #plywood"></a-box>
 
-  <a-box width="0.03" height="2.03" depth="0.23" position="-0.3 1.065 -0.01" color="#ffc87a" material="src: #plywood"opacity="0.9"></a-box>
+  <a-box width="0.03" height="2.03" depth="0.23" position="-0.3 1.065 -0.01" color="#ffc87a" material="src: #plywood" opacity="0.9"></a-box>
   <a-box width="0.03" height="2.03" depth="0.23" position="0.3 1.065 -0.01" color="#ffc87a" material="src: #plywood" opacity="0.9"></a-box>
 
   <a-box width="1.70" height="0.02" depth="0.23" position="0 0.5 -0.01" color="#ffc87a" material="src: #plywood"></a-box>
@@ -563,7 +575,7 @@
   <a-box id="pedestal-4" width="0.360" height="0.030" depth="0.130" position="0.028 0.081 0.041" rotation="0 0 0" color="#ffff" material="src: #white-countertop"></a-box> -->
 </a-entity>
 
-<a-entity id="ionic-column-group">
+<!-- <a-entity id="ionic-column-group">
   <a-entity id="ionic-column-1" position="-5.358 0 1.492" rotation="0 90 0">
     <a-box width="0.45" height="0.1" depth="0.45" position="0 0.05 0" color="#f7f5e6"></a-box>
     <a-cylinder radius="0.15" height="2.4" position="0 1.25 0" color="#f7f5e6" segments-radial="12"></a-cylinder>
@@ -587,7 +599,10 @@
       <a-box width="0.45" height="0.05" depth="0.45" position="0 0.12 0" color="#f7f5e6"></a-box>
     </a-entity>
   </a-entity>
-</a-entity>
+</a-entity> -->
+
+<a-entity gltf-model="#white-column" position="-2.918 0 9.520" material="color: #FFFFFF;"></a-entity>
+<a-entity gltf-model="#white-column" position="-2.918 0 5.020" material="color: #FFFFFF;"></a-entity>
 
 <a-entity id="back-checkout-counter" position="-5.217 0.000 3.617" rotation="0 90 0">
     <a-box width="3.680" height="0.810" depth="0.480" position="0.030 0.423 -0.118" color="#ffc87a" 
@@ -622,7 +637,7 @@
   <a-entity id="card-reader" position="-3.657 0.877 4.058" rotation="0 -90 0">
     <a-box width="0.12" height="0.05" depth="0.12" color="#333"></a-box>
     <a-box width="0.14" height="0.02" depth="0.18" position="0 0.06 0.02" rotation="-30 0 0" color="#222">
-    <a-plane width="0.12" height="0.15" position="0 0.011 0" rotation="-90 0 0" color="#111"material="roughness: 0; metalness: 0.5"></a-plane>
+    <a-plane width="0.12" height="0.15" position="0 0.011 0" rotation="-90 0 0" color="#111" material="roughness: 0; metalness: 0.5"></a-plane>
     <a-box width="0.15" height="0.01" depth="0.01" position="0 -0.01 0.08" color="#444"></a-box>
     </a-box>
   </a-entity>
@@ -630,7 +645,7 @@
   <a-entity id="card-reader-2" position="-3.657 0.877 3.054" rotation="0 -90 0">
     <a-box width="0.12" height="0.05" depth="0.12" color="#333"></a-box>
     <a-box width="0.14" height="0.02" depth="0.18" position="0 0.06 0.02" rotation="-30 0 0" color="#222">
-    <a-plane width="0.12" height="0.15" position="0 0.011 0" rotation="-90 0 0" color="#111"material="roughness: 0; metalness: 0.5"></a-plane>
+    <a-plane width="0.12" height="0.15" position="0 0.011 0" rotation="-90 0 0" color="#111" material="roughness: 0; metalness: 0.5"></a-plane>
     <a-box width="0.15" height="0.01" depth="0.01" position="0 -0.01 0.08" color="#444"></a-box>
     </a-box>
   </a-entity>
@@ -1035,17 +1050,15 @@
 <a-entity id="compass-display" position="-0.395 0.023 -0.373" rotation="90 -90 180" scale="1.200 1.200 1.200">
     <a-box width="0.12" height="0.05" depth="0.12" color="#333"></a-box>
     <a-box width="0.14" height="0.02" depth="0.18" position="0.00 0.085 0.020" rotation="-50.00 0.00 0.00" color="#222">
-    <a-plane width="0.12" height="0.15" position="0 0.011 0" rotation="-90 0 0" color="#111"material="roughness: 0; metalness: 0.5"></a-plane>
+    <a-plane width="0.12" height="0.15" position="0 0.011 0" rotation="-90 0 0" color="#111" wmaterial="roughness: 0; metalness: 0.5"></a-plane>
   </a-entity>
 </a-entity>
 
-<a-entity
+<!-- <a-entity
     gltf-model="#athena-model"
     position="4.435 0.000 7.794"
-    rotation="0 180 0" 
-    scale="1 1 1"
-    color="white">
-</a-entity>
+    rotation="0 180 0">
+</a-entity> -->
 
 <a-entity light="type: ambient; color: #BBB"></a-entity>
 <a-entity light="type: directional; intensity: 0.6" position="-1 1 1"></a-entity>
@@ -1056,14 +1069,10 @@
           target="#athena">
 </a-entity>
 
-<a-entity id="rig" movement-controls="controls: gamepad,keyboard ; fly: true; speed: 0.3">
+<a-entity id="rig" movement-controls="controls: gamepad,keyboard ; fly: false; speed: 0.3 constrainTonavMesh: true" position="8.5 0 5.8" rotation="0 90 0">
   <a-entity id="head" camera position="0 1.6 0" look-controls></a-entity>
   <a-entity laser-controls="hand: right"></a-entity>
   <a-entity laser-controls="hand: left"></a-entity>
-</a-entity>
-
-<a-entity id="rig" position="8.5 0 5.8" rotation="0 90 0">
-  <a-camera look-controls wasd-controls></a-camera>
 </a-entity>
 
     </a-scene>
